@@ -1,0 +1,106 @@
+---
+title: "WEEK 12 IP"
+author: "Cherono K"
+date: "9/3/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# WEEK 12 IP
+
+## 1. Defining the Question
+
+In this week's project I'll be working as a Data Science Consultant to a Kenyan entrepreneur who has created an online cryptography course and would want to advertise it on her blog. She currently targets audiences originating from various countries. In the past, she ran ads to advertise a related course on the same blog and collected data in the process. She would now like to employ my services as a Data Science Consultant to help her identify which individuals are most likely to click on her ads. 
+
+## 2. Defining the Metric for Success
+
+## 3. Understanding the context
+
+Every mainstream media website, news site, top blog, YouTube, and social media site uses advertising, and it’s because advertising is a proven moneymaker. If you’re a blogger with an audience that companies want to reach, you have the potential to make money by selling ads. Therefore, it’s important that you know what type of advertising is going to sell best to your specific audience. As such, learning stats about your audience can help you to learn the basic demographics of your audience. The more you know about your audience, the better you’ll be able to sell advertising to them.
+
+## 4. Recording the Experimental Design
+
+## 5. Data Relevance
+
+Our data is very relevant to our research question. As had mentioned earlier, the more you know about your audience, the better you’ll be able to sell advertising to them. The dataset provided has very relevant information about the blog's audience.
+
+## 6. Reading the Data
+```{r}
+#Loading the Dataset
+advertising_dataset <- read.csv(url("http://bit.ly/IPAdvertisingData"))
+```
+
+## 6. Checking the Data
+### a.) Previewing the Data
+```{r}
+#Previewing the top of our dataset
+head(advertising_dataset)
+```
+```{r}
+#Previewing the bottom of the dataset
+tail(advertising_dataset)
+```
+```{r}
+#Displaying the structure of our dataset
+str(advertising_dataset)
+#Checking the dimension of our dataset
+dim(advertising_dataset)
+#Checking the class of our data set using the class() function
+class(advertising_dataset)
+```
+### b.) Null Values
+```{r}
+#Checking the number of missing data in our dataset
+sum(is.na(advertising_dataset))
+```
+### c.) Duplicates
+```{r}
+#Checking for duplicated data
+duplicated <- advertising_dataset[duplicated(advertising_dataset),]
+duplicated
+```
+### d.) Outliers
+```{r}
+# Checking for outliers on the numeric columns
+(boxplot(advertising_dataset$Daily.Time.Spent.on.Site))
+```
+```{r}
+(boxplot(advertising_dataset$Age))
+```
+```{r}
+(boxplot(advertising_dataset$Area.Income))
+```
+
+## 7. Tidying the Dataset
+```{r}
+(boxplot(advertising_dataset$Daily.Internet.Usage))
+```
+```{r}
+(boxplot(advertising_dataset$Male))
+```
+```{r}
+(boxplot(advertising_dataset$Clicked.on.Ad))
+```
+
+## 8. Exploratory Analysis
+### a.) Univariate Analysis
+```{r}
+# Summary statistics of the scaled data
+(summary(advertising_dataset))
+```
+```{r}
+tab_frequencies(advertising_dataset$City)
+```
+
+### b.) Bivariate Analysis
+
+## 9. Challenging the Solution
+
+## 10. Conclusions and Recommendations
+
+

@@ -6,10 +6,10 @@ The project involves analysis data provided by a Kenyan Entrepreneur who owns a 
 There is a knitted pdf containing the analysis and workflow of the project.
 
 ## Usage
-Download the pdf then in order to run the pdf as an RMarkdoen document.
+Download the pdf then in order to run the pdf as an RMarkdown document.
 
 ## Installation
-Install R and R Studio in order to run the RMarksown document.
+Install R and R Studio in order to run the RMarkdown document.
 
 ## Built on
 R and RStudio
